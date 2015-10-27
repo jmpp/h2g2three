@@ -3,7 +3,7 @@ A funky live coding environment for Three.js
 
 ## Using it
 The easiest way to use it is [this online version](http://avgp.github.io/h2g2three).
-Alternatively, you can clone the repository and open the `index.html` in your browser 
+Alternatively, you can clone the repository, run once `npm run build` (will build the sources into `app.js`), and simply open the `index.html` in your browser 
 (or even better: [Use a static file server locally](https://gist.github.com/willurd/5720255))
 
 The editor consists of a text field for your code and the WebGL scene in the background to display the result.
@@ -37,8 +37,7 @@ You can also use `ALT+T` to toggle the editor and only see the scene.
 
 ## Hacking it
 Clone the repository and run `npm install` to get all dependencies installed.
-Then run `npm run dev` to have [watchify](https://github.com/substack/watchify) 
-watch the `js/` folder and continuously bundle it as `app.js` when you change code.
+Then run `gulp serve` to have a server with [livereload](https://www.npmjs.com/package/livereload) + [browserify](https://github.com/substack/node-browserify) and a gulp task who will watch the `js/` folder and continuously bundle it as `app.js` and reload your page when you change code.
 
 Once you're done, you can use `npm run build` to get a minified build for deploying it somewhere.
 

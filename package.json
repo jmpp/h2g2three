@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "browserify js/main.js | uglifyjs -mc > app.js",
-    "dev": "watchify -v -o app.js js/main.js"
+    "build": "browserify js/main.js | uglifyjs -mc > app.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +18,11 @@
   "devDependencies": {
     "beefy": "^2.1.1",
     "browserify": "^8.0.3",
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-open": "^1.0.0",
     "uglify-js": "^2.4.16",
-    "watchify": "^2.2.1"
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
